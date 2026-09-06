@@ -1,0 +1,23 @@
+{
+  "stage1": null,
+  "stage1_agentic": null,
+  "field_discovery": null,
+  "stage2": {
+    "model": "anthropic/claude-opus-4-8",
+    "prompt_tokens": 14198,
+    "completion_tokens": 2096,
+    "total_tokens": 16294,
+    "image_tokens": null,
+    "text_tokens": 11838,
+    "cached_tokens": 2360,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 2360,
+    "reasoning_tokens": 0,
+    "response_text_tokens": 2096,
+    "cost_usd": 0.11277,
+    "elapsed_seconds": 33.179
+  },
+  "stage2_agentic": null,
+  "total_cost_usd": 0.11277,
+  "total_elapsed_seconds": 33.179
+}

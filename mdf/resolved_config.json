@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "input": {
+    "pages": "/data/app/runs/run-f2ef0bf49d54/inputs/pages/Vasilevich_Dictionary_1.pdf",
+    "dataset_dir": null,
+    "samples_dir": null,
+    "stage1_predictions_root": null,
+    "dictionary_pages": "11-575",
+    "introduction": null,
+    "introduction_pages": "1-10",
+    "alphabet": "/data/app/runs/run-f2ef0bf49d54/inputs/instructions/character_inventory.txt",
+    "ocr_text": null,
+    "dictionary_languages": null,
+    "dictionary_profile": {
+      "headword": {
+        "language": "Evenki",
+        "script": "Cyrillic"
+      },
+      "targets": [
+        {
+          "language": "Russian",
+          "script": "Cyrillic"
+        }
+      ],
+      "page_layout": "There are two columns. Each column contains the headword and the Russian counterpart",
+      "information_types": [
+        "translation",
+        "example",
+        "etymology",
+        "cross_reference",
+        "variant",
+        "grammar"
+      ],
+      "other_information_types": null
+    },
+    "toolbox_pdf": null,
+    "languages": null
+  },
+  "output": {
+    "directory": "/app/outputs"
+  },
+  "pipeline": {
+    "stage": "2-pass-1",
+    "strategy": "two_stage",
+    "stage1_mode": "flat",
+    "stage1_input": "auto",
+    "stage1_source": "predictions",
+    "stage1_typography": false,
+    "parse_rules_pages": [],
+    "parse_rules_file": null,
+    "parse_rules_gold": false,
+    "stage2_lexical_repair": false,
+    "stage1_guides": null,
+    "stage2_guides": null
+  },
+  "models": {
+    "default": "anthropic/claude-opus-4-8",
+    "stage1": "anthropic/claude-opus-4-8",
+    "stage2_pass1": "anthropic/claude-opus-4-8",
+    "stage2_pass2": "anthropic/claude-opus-4-8",
+    "openrouter_provider": null,
+    "stage1_reasoning": "low",
+    "stage2_reasoning": "low",
+    "stage2_pass1_reasoning": "low",
+    "stage2_pass2_reasoning": "low",
+    "temperature": 1.0
+  },
+  "agentic": {
+    "stage1": false,
+    "stage2": false,
+    "max_iterations": 2,
+    "evaluator_model": null,
+    "rewriter_model": null,
+    "reasoning": "low",
+    "evaluator_reasoning": "high",
+    "rewriter_reasoning": "low",
+    "min_retry_confidence": 0.55,
+    "verifier_patches": true,
+    "require_concrete_retry": true
+  },
+  "runtime": {
+    "batch_size": 1,
+    "limit": null,
+    "overwrite": false,
+    "prompt_cache": "auto",
+    "media_reference": "auto",
+    "prompt_cache_key": null,
+    "experiment_name": "default",
+    "stage2_experiment_name": null,
+    "stage1_output_subdir": "stage-1",
+    "one_page_per_entry": false,
+    "page_offset": 1,
+    "use_alphabet": true,
+    "use_ocr_hint": true,
+    "ocr_hint_experiment": null,
+    "use_introduction": true
+  },
+  "kind": "inference"
+}
